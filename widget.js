@@ -55,6 +55,7 @@ const state = [
   }
 ];
 
+
 const start = state.find((item) => {
   return item.id === 'welcome';
 });
@@ -92,6 +93,8 @@ const renderButtons = (state) => {
     state.buttons.forEach((btn) => {
     const button = document.createElement('button');
     button.textContent = btn.text;
+    button.type = 'button'; 
+    button.classList.add('btn', 'btn-primary'); 
     button.addEventListener('click', () => handleClick(btn.next_state_id));
     buttonsEl.appendChild(button);
   })
@@ -101,3 +104,5 @@ const renderButtons = (state) => {
 renderMessages(messages);
 
 renderButtons(currentState);
+
+
