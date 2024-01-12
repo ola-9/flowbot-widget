@@ -60,7 +60,7 @@ const start = state.find((item) => {
 });
 
 let currentState = start;
-const messages = [start.message]; // Здесь мы создаем массив из одного элемента
+const messages = [start.message];
 
 const root = document.getElementById('root');
 const messagesEl = document.querySelector('.messages');
