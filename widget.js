@@ -43,7 +43,7 @@ const runFlowbot = (state) => {
    
   renderMessages(messages);
   
-  // renderButtons(currentState);
+  renderButtons(currentState);
 }
 
 
