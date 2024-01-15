@@ -3,18 +3,16 @@ const runFlowbot = (state) => {
     return item.id === 'welcome';
   });
   
-  let currentState = start;
   const messages = [start.message];
   
   const root = document.getElementById('root');
+  
   const messagesEl = document.querySelector('.messages');
   const buttonsEl = document.querySelector('.buttons');
   
   const handleClick = (nextState) => {
-    const res = state.find((item) => item.id === nextState);
+    const currentState = state.find((item) => item.id === nextState);
     messages.push(res.message);
-    currentState = res;
-    console.log('click');
     renderMessages(messages);
     renderButtons(currentState);
   }
@@ -42,9 +40,10 @@ const runFlowbot = (state) => {
       buttonsEl.appendChild(button);
     })
   }
-  
-  
+   
   renderMessages(messages);
   
-  renderButtons(currentState);
+  // renderButtons(currentState);
 }
+
+
